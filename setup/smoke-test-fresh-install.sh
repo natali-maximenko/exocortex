@@ -340,6 +340,8 @@ E2E_MEM="$HOME/.claude/projects/$(echo "$E2E_WS" | tr '/' '-')/memory"
 mkdir -p "$E2E_WS"
 E2E_RC=0
 E2E_OUT=$(SETUP_CI=1 GITHUB_USER=smoke-e2e WORKSPACE_DIR="$E2E_WS" \
+    GIT_AUTHOR_NAME="smoke-e2e" GIT_AUTHOR_EMAIL="smoke@test.local" \
+    GIT_COMMITTER_NAME="smoke-e2e" GIT_COMMITTER_EMAIL="smoke@test.local" \
     bash "$TEMPLATE_DIR/setup.sh" --core 2>&1) || E2E_RC=$?
 if [ "$E2E_RC" -ne 0 ]; then
     fail "e2e setup.sh --core завершился с rc=$E2E_RC: $(echo "$E2E_OUT" | tail -5)"
