@@ -13,8 +13,8 @@ related: DP.SC.036, DP.KR.001
 
 # Routing Vocabulary — L0 Fast-Path
 
-> **Принцип:** сначала этот файл. Miss или сомнение → DP.KR.001 §5.2-§5.7 (slow-path).
-> Source of truth — DP.KR.001 (Pack). Этот файл — проекция. При расхождении — DP.KR.001 побеждает.
+> **Принцип:** сначала этот файл. Miss или сомнение → `memory/repo-type-rules.md` (slow-path, universal).
+> Source of truth — `memory/repo-type-rules.md`. Этот файл — fast-path проекция. При расхождении — repo-type-rules.md побеждает.
 > **Настройка:** замените `{{STRATEGY_REPO}}`, `{{ECOSYSTEM_REPO}}`, `{{INSTRUMENT_REPO}}` именами ваших репо.
 > **Обновление:** при каждом инциденте неверного размещения добавить строку + дату.
 
