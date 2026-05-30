@@ -33,10 +33,15 @@ Versioning: [Semantic Versioning](https://semver.org/).
 
 
 
+
+
+
 ## [Unreleased] — обновлено 2026-05-30
 
 ### Added
 
+- `b144b3a` feat(strategist): read weekly-digest.md as Loop C input
+- `92a1548` feat(WP-367): promote peer-conversation + kimi-peer-writer v4 (Decision Gate fix + двухосная meta.yaml)
 - `04ba98e` feat: WP-358 Ф6 delivery — external sessions infrastructure
 - `abca838` feat(hooks): pre-commit gates PROMOTE-DRY-RUN + CLEAN-ENV-SMOKE (PD-2/PD-1, WP-347)
 - `a8eadab` feat(promote): promotion-status.yaml + record_promotion (PZ-6)
