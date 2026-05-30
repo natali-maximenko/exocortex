@@ -31,10 +31,13 @@ Versioning: [Semantic Versioning](https://semver.org/).
 
 
 
-## [Unreleased] — обновлено 2026-05-29
+
+
+## [Unreleased] — обновлено 2026-05-30
 
 ### Added
 
+- `04ba98e` feat: WP-358 Ф6 delivery — external sessions infrastructure
 - `abca838` feat(hooks): pre-commit gates PROMOTE-DRY-RUN + CLEAN-ENV-SMOKE (PD-2/PD-1, WP-347)
 - `a8eadab` feat(promote): promotion-status.yaml + record_promotion (PZ-6)
 - `36285bc` feat(coverage): coverage-skills.sh — B12a/b/c/d detector (PZ-3)
@@ -75,6 +78,8 @@ Versioning: [Semantic Versioning](https://semver.org/).
 - `cecf52d` feat(WP-348): Ф4 — create-skill.sh + validate-skill.sh
 - `d4e3db2` feat(WP-348): Ф3 — SKILL.md v2 шаблон + генератор каталога + мигратор
 - `2136141` feat: settings-promote.sh + pre-commit HOOK-PATH-CONVENTION gate
+- `333c83d` feat(strategist): complete runner migration — run_skill() for day-open/day-close/week-close/strategy-session
+- `f550e9b` feat(pack-templates): DP.ROLE.NNN Constraint Analyst + DP.SC.NNN + DP.WP.NNN
 
 ### Changed
 
@@ -126,6 +131,9 @@ Versioning: [Semantic Versioning](https://semver.org/).
 - `8a231a3` fix(CI): закрыть 3 реальных блокера Validate Template
 - `b00ef4c` fix(settings-promote): inline jq check вместо полного validate-fmt-scripts.sh
 - `72f7572` fix: hook paths — $CLAUDE_PROJECT_DIR/ convention for all hook commands
+- `e337183` fix(manifest): remove strategist prompts from deprecated_files — runner still uses them
+- `5bffbc9` fix: replace hardcoded DS-strategy with GOVERNANCE_DIR/GOVERNANCE_REPO env vars
+- `2c5e91d` fix(pack-templates): DP.WP.NNN — добавить §6 пример Stage Dependency Map
 
 
 ## [0.34.1] — 2026-05-21

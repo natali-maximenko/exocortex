@@ -2,7 +2,7 @@
 # see DP.SC.153
 # НЕ редактировать вручную — перегенерировать через generate-skills-catalog.sh
 #
-generated: 2026-05-29T16:04:11Z
+generated: 2026-05-30T07:04:36Z
 skills_dir: .claude/skills
 
 skills:
@@ -189,6 +189,17 @@ skills:
     - ke
     - pack-new
     - apply-captures
+  - id: kimi-peer-writer
+    name: "kimi-peer-writer"
+    description: "Peer-сессия DP.SC.154 где Kimi = писатель, Claude = напарник. Запускается простой фразой. Включает ОРЗ Opening и Closing, turn-loop, эскалации, Decision Gate (зафиксировать vs реализовать → ревью → проверить → задеплоить), отложенную финализацию и верификацию."
+    version: 1.2.0
+    layer: L1
+    status: active
+    triggers:
+      slash:
+        - /peer-writer
+    depends_on: []
+    invoked_by: []
   - id: lesson-close
     name: "lesson-close"
     description: "Закрыть занятие, открытое скиллом /lesson. Финализирует workbook/YYYY-MM-DD.md (frontmatter status, метаданные времени, длительность), делает commit + push в репо personal-guide. Триггерит замкнутый контур доставки — после push → GitHub webhook → bot oauth_server.py:/webhook/github/workbook → sync_one_user_to_dt → ЦД обновляется в Neon. Используй когда пилот говорит «закрываем», «всё», «закончили», «закрой урок» — или после явного завершения задания в /lesson."
@@ -237,6 +248,7 @@ skills:
     depends_on: []
     invoked_by:
     - peer-conversation
+    - kimi-peer-writer
   - id: personal-guide-render
     name: "personal-guide-render"
     description: "Собирает (или пересобирает) персональное руководство в УЖЕ существующем репо `personal-guide` (плоское имя, один на пилота) — читает RCS из Память.Derived, выбирает заготовки stage×domain, пишет 6 файлов через personal_write. Используй когда пилот просит «пересобери руководство», «обнови мой план», «обнови methods» — или когда репо создан, а контента ещё нет."
@@ -334,6 +346,7 @@ skills:
     - peer-conversation
     - day-close
     - verify
+    - kimi-peer-writer
   - id: w-reflection
     name: "w-reflection"
     description: "Записать W-рефлексию (мировоззренческий слот RCS) в learning.w_reflections. Используется Диагностом R28 (MIM.R.009) или вызывается пользователем после рефлексивной сессии. Влияет на gate Д→П (FORM.089 §5.2)."
