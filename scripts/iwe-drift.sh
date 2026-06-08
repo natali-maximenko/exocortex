@@ -23,6 +23,14 @@
 
 set -eu
 
+# Detect stat mtime flag once — BSD/macOS uses -f %m, GNU/Linux uses -c %Y.
+# Use unquoted $_STAT_FLAG in xargs pipelines (word-split is required for multi-token flags).
+if stat -f %m /dev/null >/dev/null 2>&1; then
+    _STAT_FLAG="-f %m"  # BSD/macOS
+else
+    _STAT_FLAG="-c %Y"  # GNU/Linux
+fi
+
 IWE_ROOT="${IWE_ROOT:-$HOME/IWE}"
 MANIFEST="${MANIFEST:-$IWE_ROOT/.claude/sync-manifest.yaml}"
 MODE="all"
@@ -46,7 +54,7 @@ if [ ! -f "$MANIFEST" ]; then
     exit 1
 fi
 
-# Получить mtime файла в днях от сегодня (macOS stat -f, Linux stat -c)
+# Получить mtime файла в днях от сегодня (использует $_STAT_FLAG, определяется выше)
 mtime_days_ago() {
     local path="$1"
     if [ ! -e "$path" ]; then
@@ -54,11 +62,8 @@ mtime_days_ago() {
         return
     fi
     local mtime
-    if stat -f %m "$path" >/dev/null 2>&1; then
-        mtime=$(stat -f %m "$path")
-    else
-        mtime=$(stat -c %Y "$path")
-    fi
+    # shellcheck disable=SC2086  # $_STAT_FLAG intentionally unquoted (multi-token flag)
+    mtime=$(stat $_STAT_FLAG "$path")
     local now
     now=$(date +%s)
     echo $(( (now - mtime) / 86400 ))
@@ -72,8 +77,9 @@ dir_newest_mtime_days_ago() {
         return
     fi
     local newest
+    # shellcheck disable=SC2086  # $_STAT_FLAG intentionally unquoted (multi-token flag)
     newest=$(find "$dir" -type f -not -path '*/.git/*' -print0 2>/dev/null \
-        | xargs -0 stat -f %m 2>/dev/null \
+        | xargs -0 stat $_STAT_FLAG 2>/dev/null \
         | sort -nr | head -1)
     if [ -z "${newest:-}" ]; then
         echo "-1"
