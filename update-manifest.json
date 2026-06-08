@@ -657,6 +657,12 @@
       "path": "roles/strategist/prompts/strategy-session-weekly.md"
     },
     {
+      "path": "roles/strategist/prompts/strategy-session-weekly/appendix/consent-check.md"
+    },
+    {
+      "path": "roles/strategist/prompts/strategy-session-weekly/appendix/dt-guide-prep.md"
+    },
+    {
       "path": "roles/strategist/prompts/strategy-session-weekly/jump-handler.md"
     },
     {
@@ -840,6 +846,9 @@
       "path": "scripts/claude-peer-adapter.sh"
     },
     {
+      "path": "scripts/close-wp.sh"
+    },
+    {
       "path": "scripts/coverage-skills.sh"
     },
     {
@@ -1006,6 +1015,12 @@
     },
     {
       "path": "scripts/test-route-task.sh"
+    },
+    {
+      "path": "scripts/tests/conftest.py"
+    },
+    {
+      "path": "scripts/tests/test_agent_dashboard.py"
     },
     {
       "path": "scripts/validate-fmt-scripts.sh"
@@ -1206,6 +1221,10 @@
     {
       "path": "roles/synchronizer/scripts/systemd/iwe-exocortex-scheduler.timer",
       "reason": "systemd template — processed by build-runtime.sh, not delivered directly"
+    },
+    {
+      "path": "inbox/fleeting-notes.md",
+      "reason": "personal notes — user-specific content, not part of template delivery"
     }
   ]
 }
