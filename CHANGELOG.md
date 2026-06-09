@@ -20,10 +20,14 @@ Versioning: [Semantic Versioning](https://semver.org/).
 
 
 
-## [Unreleased] — обновлено 2026-06-08
+
+## [Unreleased] — обновлено 2026-06-09
 
 ### Added
 
+- `718ee1f` feat: token optimization — lazy-load roles, distinctions, peer session modes
+- `bdd5ec2` feat(setup): авторизация MCP по тирам — T3/T4 CLI, T1-T2 OAuth
+- `7b33865` feat: density-reinjection стиля + блок-режим детектора (peer-session 2026-06-08-23)
 - `bfa7172` feat(WP-405 Ф2): translate all 39 SKILL.md descriptions to English
 - `321bab6` feat(distinctions): Gateway с одной ответственностью ≠ Gateway с прикладной логикой
 - `a24f295` feat: memory sync hook + exocortex restore (closes #125)
@@ -72,6 +76,7 @@ Versioning: [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- `96003c5` Merge pull request #166 from TserenTserenov/fix/pr-164-blockers
 - `51f609d` docs(WP-349 Ф31): web-onboarding v2 — freemium, две оси, без триала
 - `ba4f5e6` docs(WP-349): Ф34 — онбординг-доки под канон двух осей
 - `6a634a8` chore: обновление promotion-status (peer-conversation skill)
@@ -90,6 +95,10 @@ Versioning: [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- `e814373` fix(FMT): close manifest coverage gap (WP-7 MFC1-MFC3)
+- `d12febc` fix(manifest): register 4 new lazy-load files from PR #164/#166
+- `9a795af` fix: typo in role-prefixes + trim protocol-open to ≤150 lines
+- `1ad08db` fix(pr-164): remove duplicate templates.md, empty facts-gathering; add memory index entries
 - `5600848` fix(strategy-session): системный фикс — СТОП в step-файлах, resume-механизм, устранение молчаливых переходов
 - `8a29f3b` fix(strategy-session): БЛОКИРУЮЩЕЕ — один шаг за раз, ждать ответа пилота перед следующим
 - `a80c7d1` fix(skills): translate ke/fpf descriptions to English for SkillHub compatibility
