@@ -186,6 +186,9 @@
       "path": ".claude/skills/kimi-peer-writer/SKILL.md"
     },
     {
+      "path": ".claude/skills/kimi-peer-writer/modes.md"
+    },
+    {
       "path": ".claude/skills/lesson-close/SKILL.md"
     },
     {
@@ -208,6 +211,9 @@
     },
     {
       "path": ".claude/skills/peer-conversation/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/peer-conversation/modes.md"
     },
     {
       "path": ".claude/skills/personal-guide-render/SKILL.md"
@@ -462,6 +468,9 @@
       "path": "memory/day-rhythm-config.yaml"
     },
     {
+      "path": "memory/distinctions-warm.md"
+    },
+    {
       "path": "memory/dry-run-contract.md"
     },
     {
@@ -505,6 +514,9 @@
     },
     {
       "path": "memory/repo-type-rules.md"
+    },
+    {
+      "path": "memory/roles-detail.md"
     },
     {
       "path": "memory/roles.md"
@@ -1126,18 +1138,6 @@
     },
     {
       "path": "templates/strategy-skeleton/inbox/fleeting-notes.md"
-    },
-    {
-      "path": "memory/distinctions-warm.md"
-    },
-    {
-      "path": "memory/roles-detail.md"
-    },
-    {
-      "path": ".claude/skills/kimi-peer-writer/modes.md"
-    },
-    {
-      "path": ".claude/skills/peer-conversation/modes.md"
     },
     {
       "path": "update.sh"
