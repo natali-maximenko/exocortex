@@ -33,7 +33,13 @@
       "path": ".claude/hooks/capture-bus.sh"
     },
     {
+      "path": ".claude/hooks/check-trash.sh"
+    },
+    {
       "path": ".claude/hooks/close-gate-reminder.sh"
+    },
+    {
+      "path": ".claude/hooks/destructive-guard.sh"
     },
     {
       "path": ".claude/hooks/dry-run-gate.sh"
@@ -430,6 +436,30 @@
     },
     {
       "path": "extensions/day-open.after.session-orphans.md"
+    },
+    {
+      "path": "extensions/local-llm/ADR-001-local-llm-stack.md"
+    },
+    {
+      "path": "extensions/local-llm/README.md"
+    },
+    {
+      "path": "extensions/local-llm/detect-hardware.sh"
+    },
+    {
+      "path": "extensions/local-llm/install-local-llm.sh"
+    },
+    {
+      "path": "extensions/local-llm/iwe-local-llm.sh"
+    },
+    {
+      "path": "extensions/local-llm/model-catalog.yaml"
+    },
+    {
+      "path": "extensions/local-llm/model-lifecycle.py"
+    },
+    {
+      "path": "extensions/local-llm/model-monitor.py"
     },
     {
       "path": "extensions/protocol-close.after.session-record.md"
