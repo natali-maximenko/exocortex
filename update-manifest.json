@@ -48,6 +48,9 @@
       "path": ".claude/hooks/extensions-gate.sh"
     },
     {
+      "path": ".claude/hooks/inject-code-style.sh"
+    },
+    {
       "path": ".claude/hooks/inject-communication-style.sh"
     },
     {
@@ -70,6 +73,9 @@
     },
     {
       "path": ".claude/hooks/protocol-stop-gate.sh"
+    },
+    {
+      "path": ".claude/hooks/pull-on-touch.sh"
     },
     {
       "path": ".claude/hooks/response-clarity-hook.sh"
@@ -285,6 +291,12 @@
       "path": ".claude/skills/wp-new/SKILL.md"
     },
     {
+      "path": ".claude/styles/p05-core.md"
+    },
+    {
+      "path": ".claude/styles/s0-core.md"
+    },
+    {
       "path": ".claude/sync-manifest.yaml"
     },
     {
@@ -436,6 +448,9 @@
     },
     {
       "path": "extensions/agent-inbox/templates/soak-verify.md"
+    },
+    {
+      "path": "extensions/agentigore.sample"
     },
     {
       "path": "extensions/day-close.checks.session-orphans.md"
@@ -958,6 +973,7 @@
     "scripts/smoke-clean-env.sh",
     "scripts/staging-audit.sh",
     "scripts/style-check-post-run.sh",
+    "scripts/style-promote.sh",
     "scripts/sync-agent-instructions.sh",
     "scripts/sync-communication-style.py",
     "scripts/sync-communication-style.yaml.example",

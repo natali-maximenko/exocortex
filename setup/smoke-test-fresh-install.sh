@@ -258,8 +258,8 @@ if [ -x "$RUNTIME_RUNNER" ]; then
 fi
 rm -f "$TEST_FMT_PROMPT"
 
-# === Test 6d: cleanup-processed-notes.py читает GOVERNANCE_REPO из env (R6.1* regression) ===
-echo "[6d] cleanup-processed-notes.py резолвит GOVERNANCE_REPO из env (R6.1* regression)..."
+# === Test 6e: cleanup-processed-notes.py читает GOVERNANCE_REPO из env (R6.1* regression) ===
+echo "[6e] cleanup-processed-notes.py резолвит GOVERNANCE_REPO из env (R6.1* regression)..."
 PY_RESULT=$(IWE_WORKSPACE="$TEST_WS" IWE_GOVERNANCE_REPO=DS-pilot-strategy \
     python3 -c "
 import sys, importlib.util
