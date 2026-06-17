@@ -273,16 +273,16 @@
       "path": ".claude/skills/skill-creator/assets/skill-scaffold-minimal.md"
     },
     {
-      "path": ".claude/skills/skill-creator/scripts/scaffold-init.sh"
-    },
-    {
-      "path": ".claude/skills/skill-creator/scripts/verify-skill.sh"
+      "path": ".claude/skills/skill-creator/scripts/batch-fix-skills.py"
     },
     {
       "path": ".claude/skills/skill-creator/scripts/content-audit.sh"
     },
     {
-      "path": ".claude/skills/skill-creator/scripts/batch-fix-skills.py"
+      "path": ".claude/skills/skill-creator/scripts/scaffold-init.sh"
+    },
+    {
+      "path": ".claude/skills/skill-creator/scripts/verify-skill.sh"
     },
     {
       "path": ".claude/skills/strategy-session/SKILL.md"

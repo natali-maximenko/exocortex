@@ -48,10 +48,17 @@ Versioning: [Semantic Versioning](https://semver.org/).
 
 
 
+
+
+
+
+
+
 ## [Unreleased] — обновлено 2026-06-17
 
 ### Added
 
+- `bcdb0ed` feat(skills): promote skill-creator v0.3.2 + C6 audit + pg-start Verification
 - `326c460` feat(WP-422): promote 7 skills with C3-fixed step headings (L1)
 - `d2dd196` feat(WP-422/SP1): promote skill iwe-restore to platform (L1)
 - `a3ecd21` feat(skills): promote agent-fault + apply-captures to L1 (WP-422 Ф7 audit)

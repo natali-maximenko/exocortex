@@ -2,7 +2,7 @@
 # see DP.SC.153
 # НЕ редактировать вручную — перегенерировать через generate-skills-catalog.sh
 #
-generated: 2026-06-17T14:07:36Z
+generated: 2026-06-17T15:11:57Z
 skills_dir: .claude/skills
 
 skills:
@@ -33,17 +33,19 @@ skills:
     - apply-captures
   - id: archgate
     name: "archgate"
-    description: "Evaluate an architectural decision against 7 ECOGSSS characteristics (v3 — profile without aggregate score, conjunctive screening). Use when the pilot proposes an architectural decision, new tool, or system change."
-    version: 0.0.0
-    layer: unknown
+    description: "Оценка архитектурного решения по 7 характеристикам ЭМОГССБ (v3 — профиль без агрегатного балла, conjunctive screening). Используй когда пользователь предлагает архитектурное решение, новый инструмент или системное изменение."
+    version: 1.0.0
+    layer: L1
     status: active
     triggers:
-      slash: []
+      slash:
+        - /archgate
     depends_on: []
     invoked_by:
     - CLAUDE.md
     - verify
     - bottleneck-pick
+    - archgate
     - decompose
   - id: artifactor
     name: "artifactor"
@@ -121,7 +123,7 @@ skills:
     - consent
   - id: day-close
     name: "day-close"
-    description: "Day Close protocol. Alias for /run-protocol close day — symmetric with /day-open."
+    description: "Протокол закрытия дня (Day Close). Алиас для /run-protocol close day — симметрия с /day-open."
     version: 1.0.0
     layer: L1
     status: active
@@ -132,6 +134,7 @@ skills:
     invoked_by:
     - run-protocol
     - extend
+    - day-close
     - day-close
   - id: day-open
     name: "day-open"
@@ -147,8 +150,10 @@ skills:
     - run-protocol
     - extend
     - day-close
+    - day-close
     - week-close-pilot
     - day-open
+    - week-close
   - id: decompose
     name: "decompose"
     description: "Decompose work into stages with physical artifacts and acceptance checklists. Gap detector. Use when opening a WP ≥3h (open-loop/problem-framing) or on explicit request to break into stages. Executes R29 Decomposer role."
@@ -421,7 +426,9 @@ skills:
     invoked_by:
     - CLAUDE.md
     - day-close
+    - day-close
     - audit-installation
+    - week-close
   - id: setup-wakatime
     name: "setup-wakatime"
     description: "Set up WakaTime time-tracking for Claude Code and VS Code."
@@ -447,7 +454,7 @@ skills:
     - skill-creator
   - id: strategy-session
     name: "strategy-session"
-    description: "Strategy session — dispatcher. Day 0 (no Strategy.md/WeekPlan) → initial flow (goals, dissatisfactions, first WeekPlan). Day 1+ → weekly flow (requires draft from session-prep). Triggers: 'run strategy session', 'first strategy session', 'strategy session', 'let's strategize'."
+    description: "Стратегическая сессия — диспетчер. День-0 (нет Strategy.md/WeekPlan) → initial flow (цели, неудовлетворённости, первый WeekPlan). День-1+ → weekly flow (требует черновик от session-prep). Триггеры — «проведём стратегическую сессию», «первая стратегическая сессия», «strategy session», «давай стратегировать»."
     version: 1.0.0
     layer: L1
     status: active
@@ -497,12 +504,13 @@ skills:
     - skill-creator
   - id: verify
     name: "verify"
-    description: "Verify an artifact against a Pack standard. Loads VR.R.001 (Verifier) role with context isolation — checks the result, not the creation process."
-    version: 0.0.0
-    layer: unknown
+    description: "Верификация артефакта по эталону из Pack. Загружает роль VR.R.001 (Верификатор) с context isolation — проверяет результат, а не процесс создания."
+    version: 1.0.0
+    layer: L1
     status: active
     triggers:
-      slash: []
+      slash:
+        - /verify
     depends_on: []
     invoked_by:
     - run-protocol
@@ -539,7 +547,7 @@ skills:
     - week-close-pilot
   - id: week-close
     name: "week-close"
-    description: "Week Close protocol. 7-day retrospective + carry-over to new week + platform steps (backup, dirty repos)."
+    description: "Протокол закрытия недели (Week Close). Ретро 7 дней + carry-over в новую неделю + платформенные шаги (бэкап, dirty repos)."
     version: 1.2.0
     layer: L1
     status: active
@@ -553,9 +561,10 @@ skills:
     - week-close-pilot
     - month-close
     - week-close
+    - week-close
   - id: wp-new
     name: "wp-new"
-    description: "Create a new Work Product (WP) with atomic registration in 5 places. Use when a new task appears that is not in the week plan."
+    description: "Создание нового рабочего продукта (РП) с записью в 5 мест атомарно. Используй когда появляется новая задача, которой нет в плане недели."
     version: 1.0.0
     layer: L1
     status: active
