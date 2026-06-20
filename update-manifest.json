@@ -954,6 +954,9 @@
       "path": "translation-manifest.yaml"
     },
     {
+      "path": "translation/en-doc-style.md"
+    },
+    {
       "path": "translation/glossary-v0.1.csv"
     },
     {
@@ -1049,6 +1052,7 @@
     "scripts/sync-communication-style.yaml.example",
     "scripts/sync-version-badge.sh",
     "scripts/template-sync.sh",
+    "scripts/translate.py",
     "scripts/test-route-task.sh",
     "scripts/tests/conftest.py",
     "scripts/tests/test_agent_dashboard.py",
