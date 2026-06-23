@@ -6,7 +6,7 @@
 - **HUB (личные планы):** {{WORKSPACE_DIR}}/{{GOVERNANCE_REPO}}/current/
 - **Документы стратегии:** {{WORKSPACE_DIR}}/{{GOVERNANCE_REPO}}/docs/ (ВСЕ файлы: Strategy.md, Dissatisfactions.md, Session Agenda.md)
 - **Inbox:** {{WORKSPACE_DIR}}/{{GOVERNANCE_REPO}}/inbox/ ([fleeting-notes.md](https://github.com/{{GITHUB_USER}}/{{GOVERNANCE_REPO}}/blob/main/inbox/fleeting-notes.md) + свежие файлы за неделю)
-- **Активные РП:** `bash {{WORKSPACE_DIR}}/FMT-exocortex/scripts/active-wp-sweep.sh` (агрегатор по `{{GOVERNANCE_REPO}}/inbox/WP-*.md` + git-активность 7д)
+- **Активные РП:** `bash {{WORKSPACE_DIR}}/scripts/active-wp-sweep.sh` (агрегатор по `{{GOVERNANCE_REPO}}/inbox/WP-*.md` + git-активность 7д)
 - **Стратегические карты:** {{WORKSPACE_DIR}}/*/MAPSTRATEGIC.md (если есть в репо)
 - **MEMORY:** ~/.claude/projects/{{CLAUDE_PROJECT_SLUG}}/memory/MEMORY.md
 
@@ -81,7 +81,7 @@
 
 #### 5. Агрегация активных РП
 
-> Источник: `bash {{WORKSPACE_DIR}}/FMT-exocortex/scripts/active-wp-sweep.sh`
+> Источник: `bash {{WORKSPACE_DIR}}/scripts/active-wp-sweep.sh`
 >
 > Скрипт обходит все `inbox/WP-*.md`, кросс-проверяет git-активность за 7 дней,
 > выдаёт markdown-таблицу активных РП со статусами и бюджетами.
