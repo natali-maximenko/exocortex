@@ -2,8 +2,8 @@
 # see DP.SC.153
 # НЕ редактировать вручную — перегенерировать через generate-skills-catalog.sh
 #
-generated: 2026-06-23T15:17:20Z
-skills_dir: /home/tripleight/Documents/Obsidian_notes/IWE/FMT-exocortex-template/.claude/skills
+generated: 2026-06-23T18:02:19Z
+skills_dir: .claude/skills
 
 skills:
   - id: agent-fault
@@ -29,7 +29,6 @@ skills:
         - /apply-captures
     depends_on: []
     invoked_by:
-    - protocol-close
     - ke
     - apply-captures
   - id: archgate
@@ -59,7 +58,6 @@ skills:
         - /artifactor
     depends_on: []
     invoked_by:
-    - protocol-open
     - artifactor
   - id: audit-docs
     name: "audit-docs"
@@ -122,7 +120,6 @@ skills:
         - /consent
     depends_on: []
     invoked_by:
-    - protocol-dt-integration
     - consent
   - id: day-close
     name: "day-close"
@@ -135,7 +132,6 @@ skills:
         - /day-close
     depends_on: []
     invoked_by:
-    - protocol-close
     - run-protocol
     - day-close
     - day-close
@@ -144,13 +140,13 @@ skills:
     name: "day-open"
     description: "Day Open protocol. Collects yesterday's commits, issues, notes, calendar, bot QA, Scout, world events — builds DayPlan and compact dashboard."
     version: 1.1.0
-    layer: unknown
+    layer: L1
     status: active
     triggers:
-      slash: []
+      slash:
+        - /day-open
     depends_on: []
     invoked_by:
-    - protocol-open
     - CLAUDE.md
     - week-close-pilot
     - run-protocol
@@ -170,7 +166,6 @@ skills:
         - /decompose
     depends_on: []
     invoked_by:
-    - protocol-open
     - decompose
     - bottleneck-pick
   - id: diagnose
@@ -280,7 +275,6 @@ skills:
       slash: []
     depends_on: []
     invoked_by:
-    - protocol-close
     - ke
     - pack-new
     - pack-creator
@@ -332,7 +326,6 @@ skills:
         - /month-close
     depends_on: []
     invoked_by:
-    - protocol-month-close
     - CLAUDE.md
     - month-close
   - id: org-dev
@@ -446,7 +439,6 @@ skills:
       slash: []
     depends_on: []
     invoked_by:
-    - protocol-month-close
     - CLAUDE.md
     - day-close
     - day-close
@@ -509,7 +501,6 @@ skills:
         - /transcribe
     depends_on: []
     invoked_by:
-    - protocol-work
     - transcribe
   - id: vdv
     name: "vdv"
@@ -537,8 +528,6 @@ skills:
         - /verify
     depends_on: []
     invoked_by:
-    - protocol-close
-    - protocol-work
     - run-protocol
     - day-close
     - skill-creator
@@ -558,7 +547,6 @@ skills:
         - /week-close
     depends_on: []
     invoked_by:
-    - protocol-close
     - week-close-pilot
     - run-protocol
     - month-close

@@ -69,6 +69,8 @@ Versioning: [Semantic Versioning](https://semver.org/).
 
 
 
+
+
 ## [Unreleased] — обновлено 2026-06-23
 
 ### Added
@@ -100,6 +102,8 @@ Versioning: [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- `f99b55d` Merge pull request #9 from TriplEight/chore/reapply-authoring
+- `7c2608b` chore(template-sync): re-apply author customizations over synced upstream
 - `6f4c6a6` Merge pull request #8 from TriplEight/chore/sync-upstream
 - `0f65c39` merge: sync upstream (53 commits) into fork
 - `51ced2e` Merge pull request #7 from TriplEight/chore/rename-template-dedup-token-trim
@@ -120,6 +124,7 @@ Versioning: [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- `137a947` fix(ci): smoke-test pattern detection + manifest C-locale sort
 - `c2e66f2` fix(template-sync): normalize author workspace path to placeholder
 - `6141e76` fix(setup): IWE_TEMPLATE path to FMT-exocortex-template after rename
 - `c3df1f8` fix(#205/#203/#204): --check guard, §9 neutral stub, release automation
