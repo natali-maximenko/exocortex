@@ -69,6 +69,7 @@ Versioning: [Semantic Versioning](https://semver.org/).
 
 
 
+
 ## [Unreleased] — обновлено 2026-06-25
 
 ### Added
@@ -116,6 +117,7 @@ Versioning: [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- `64f690c` fix(#210): add EN section alternatives to protocol-artifact-validate.sh
 - `c3df1f8` fix(#205/#203/#204): --check guard, §9 neutral stub, release automation
 - `d8c8568` fix(validate-template): skip wakatime-heartbeat.sh in orphan hook check
 - `5917dd6` fix: pathspec enforcement in 6 finalizing skills + lesson-close + skill-promote
